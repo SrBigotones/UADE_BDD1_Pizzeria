@@ -10,7 +10,7 @@ AS
             JOIN ROL rol ON rol.ID_Rol = uRol.ID_ROL
             WHERE uRol.ID_Pizzeria = @ID_Pizzeria AND usu.ID_Usuario = @ID_Empleado; 
         
-        IF @Permiso = 'Administrador'
+        IF @Permiso = 'Administrador' OR @Permiso = 'Dueño'
         BEGIN
             SET @Resultado = 1
         END
@@ -24,7 +24,7 @@ GO
 -- TEST
 
 DECLARE @Resultado BIT
-exec tienePermisoEditarPizzeria 1, 93, @Resultado OUTPUT;
+exec tienePermisoEditarPizzeria 1, 91, @Resultado OUTPUT;
 Select @Resultado as 'Resultado';
 
 -- END TEST

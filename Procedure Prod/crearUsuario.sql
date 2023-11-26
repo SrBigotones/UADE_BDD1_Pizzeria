@@ -6,3 +6,6 @@ CREATE PROCEDURE crearUsuario(@Nombre VARCHAR(30), @Apellido VARCHAR(30), @Usuar
             (@Nombre, @Apellido, @Usuario, @Contraseña, @ID_Direccion)
         END
     GO
+
+
+exec crearUsuario 'Augusto','Gangui', 'agangui', 'ab123', 1
