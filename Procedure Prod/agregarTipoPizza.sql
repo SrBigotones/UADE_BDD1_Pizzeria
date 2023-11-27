@@ -19,3 +19,20 @@ CREATE PROCEDURE agregarTipoPizza(
         ELSE
             THROW 50001, 'El usuario no tiene los permisos necesarios',1
     END
+
+
+SELECT * FROM Usuario
+SELECT * FROM Item
+SELECT * FROm Tipo_Pizza
+
+EXEC agregarTipoPizza 1, 91, 1, 'Chica', 3000
+EXEC agregarTipoPizza 1, 91, 1, 'Media', 5000
+EXEC agregarTipoPizza 1, 91, 1, 'Grande', 6000
+
+EXEC agregarTipoPizza 1, 91, 2, 'Chica', 3000
+EXEC agregarTipoPizza 1, 91, 2, 'Media', 5000
+EXEC agregarTipoPizza 1, 91, 2, 'Grande', 6000
+
+EXEC agregarTipoPizza 1, 91, 3, 'Chica', 3000
+EXEC agregarTipoPizza 1, 91, 3, 'Media', 5000
+EXEC agregarTipoPizza 1, 91, 3, 'Grande', 6000

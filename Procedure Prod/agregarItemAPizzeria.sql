@@ -20,3 +20,8 @@ CREATE PROCEDURE agregarItemAPizzeria(
             THROW 50001, 'Usuario no tiene permisos para la accion solicitada', 1
     END
 GO
+
+
+EXEC agregarItemAPizzeria 1, 91, 'Muzzarella'
+EXEC agregarItemAPizzeria 1, 91, 'Napolitana'
+EXEC agregarItemAPizzeria 1, 91, 'Fugazzeta'
