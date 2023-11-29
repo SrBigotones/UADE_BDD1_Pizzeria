@@ -13,7 +13,7 @@ CREATE PROCEDURE agregarTipoPizza(
         EXEC tienePermisoEditarPizzeria @ID_Empleado, @ID_Pizzeria, @Permisos OUTPUT
         IF @Permisos = 1
             BEGIN
-                INSERT INTO Tipo_Pizza(Nombre, Precio, ID_Item) VALUES
+                INSERT INTO Tipos_Pizza(Nombre, Precio, ID_Item) VALUES
                 (@Nombre_Tipo_Pizza, @Precio, @ID_Item)
             END
         ELSE
@@ -21,9 +21,9 @@ CREATE PROCEDURE agregarTipoPizza(
     END
 
 
-SELECT * FROM Usuario
-SELECT * FROM Item
-SELECT * FROm Tipo_Pizza
+SELECT * FROM Usuarios
+SELECT * FROM Items
+SELECT * FROm Tipos_Pizza
 
 EXEC agregarTipoPizza 1, 91, 1, 'Chica', 3000
 EXEC agregarTipoPizza 1, 91, 1, 'Media', 5000

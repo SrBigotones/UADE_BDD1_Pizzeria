@@ -5,9 +5,9 @@ AS
     BEGIN
         DECLARE @Permiso VARCHAR(30)
 
-        SELECT @Permiso = rol.Nombre FROM Usuario usu JOIN Usuario_ROL uRol
+        SELECT @Permiso = rol.Nombre FROM Usuarios usu JOIN Usuario_ROL uRol
             ON usu.ID_Usuario = uRol.ID_Usuario
-            JOIN ROL rol ON rol.ID_Rol = uRol.ID_ROL
+            JOIN ROLES rol ON rol.ID_Rol = uRol.ID_ROL
             WHERE uRol.ID_Pizzeria = @ID_Pizzeria AND usu.ID_Usuario = @ID_Empleado; 
         
         IF @Permiso = 'Administrador' OR @Permiso = 'Dueño'

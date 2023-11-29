@@ -6,7 +6,7 @@ CREATE PROCEDURE InsertarDatosBarrio
     @ID_Localidad INT
 AS  
     BEGIN
-        INSERT INTO Barrio(Nombre, ID_Localidad)
+        INSERT INTO Barrios(Nombre, ID_Localidad)
         VALUES (@Nombre, @ID_Localidad)
     END
 GO

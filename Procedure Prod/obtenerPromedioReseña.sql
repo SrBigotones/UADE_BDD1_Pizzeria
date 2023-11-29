@@ -4,7 +4,7 @@ CREATE PROCEDURE obtenerPromedioReseña(
     @ID_Pizzeria INT
 ) AS
 BEGIN
-    SELECT AVG(Reseña.Puntaje) AS 'Promedio' FROM Reseña WHERE Reseña.ID_Pizzeria = @ID_Pizzeria
+    SELECT AVG(Reseñas.Puntaje) AS 'Promedio' FROM Reseñas WHERE Reseñas.ID_Pizzeria = @ID_Pizzeria
 END
 
 

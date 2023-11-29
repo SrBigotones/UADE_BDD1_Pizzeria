@@ -5,7 +5,7 @@ CREATE PROCEDURE insertarDatosEstiloPizza
 	@Nombre VARCHAR(30)
 AS
 	BEGIN
-		INSERT INTO Estilo_Pizza(Nombre)
+		INSERT INTO Estilos_Pizza(Nombre)
 		VALUES (@Nombre)
 	END
 GO

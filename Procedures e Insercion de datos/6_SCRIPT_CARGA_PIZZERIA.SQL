@@ -7,7 +7,7 @@ CREATE PROCEDURE insertarDatosPizzeria
 	@ID_Estilo_Pizza INT
 AS
     BEGIN
-        INSERT INTO Pizzeria(Nombre, ID_Direccion, ID_Estilo_Pizza)
+        INSERT INTO Pizzerias(Nombre, ID_Direccion, ID_Estilo_Pizza)
         VALUES(@Nombre, @ID_Dirrecion, @ID_Estilo_Pizza)
     END
 GO

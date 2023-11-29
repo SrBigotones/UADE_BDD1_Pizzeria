@@ -8,7 +8,7 @@ CREATE PROCEDURE comprarCarrito(
 BEGIN
     DECLARE @lastID INT
 
-    INSERT INTO Factura(ID_Usuario, Fecha, ID_Direccion) VALUES
+    INSERT INTO Facturas(ID_Usuario, Fecha, ID_Direccion) VALUES
     (@ID_Usuario, GETDATE(), @ID_Direccion)
     
     SET @lastID = SCOPE_IDENTITY() --Ultima Factura creada
@@ -25,9 +25,9 @@ BEGIN
     
     WHILE @@FETCH_STATUS = 0
     BEGIN
-        SELECT @Monto_Actual = Tipo_Pizza.Precio FROM Tipo_Pizza WHERE Tipo_Pizza.ID_Tipo_Pizza = @ID_Tipo_Pizza
+        SELECT @Monto_Actual = Tipo_Pizza.Precio FROM Tipos_Pizza WHERE Tipo_Pizza.ID_Tipo_Pizza = @ID_Tipo_Pizza
 
-        INSERT INTO Detalle_Factura(ID_Factura, ID_Tipo_Pizza, Unidades, Monto) VALUES
+        INSERT INTO Detalles_Factura(ID_Factura, ID_Tipo_Pizza, Unidades, Monto) VALUES
         (@lastID, @ID_Tipo_Pizza, @Unidades, @Monto_Actual)
 
         FETCH NEXT FROM MiCursor INTO @ID_Tipo_Pizza, @Unidades

@@ -5,7 +5,7 @@ CREATE PROCEDURE insertarDatosRol
     @Nombre VARCHAR(30)
 AS 
     BEGIN  
-        INSERT INTO Rol(Nombre)
+        INSERT INTO Roles(Nombre)
         VALUES (@Nombre)
     END
 GO

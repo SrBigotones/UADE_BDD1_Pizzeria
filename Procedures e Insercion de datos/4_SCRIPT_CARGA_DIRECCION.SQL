@@ -7,7 +7,7 @@ CREATE PROCEDURE insertarDatosDireccion
     @ID_Barrio INT
 AS 
     BEGIN 
-        INSERT INTO Direccion(Calle, Altura, ID_Barrio) 
+        INSERT INTO Direcciones(Calle, Altura, ID_Barrio) 
         VALUES (@Calle, @Altura, @ID_Barrio)
     END
 GO

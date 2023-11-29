@@ -5,7 +5,7 @@ CREATE PROCEDURE agregarReseña(
     @Descripcion VARCHAR(100)
 ) AS
 BEGIN
-    INSERT INTO Reseña(ID_Usuario, ID_Pizzeria, Puntaje, Descricion, Fecha) VALUES
+    INSERT INTO Reseñas(ID_Usuario, ID_Pizzeria, Puntaje, Descricion, Fecha) VALUES
     (@ID_Usuario, @ID_Pizzeria, @Puntaje, @Descripcion, GETDATE())
 END
 

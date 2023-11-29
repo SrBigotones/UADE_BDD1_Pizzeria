@@ -13,7 +13,7 @@ CREATE PROCEDURE agregarItemAPizzeria(
 
         IF @Permisos = 1
             BEGIN
-                INSERT INTO Item(Nombre, ID_Pizzeria) VALUES
+                INSERT INTO Items(Nombre, ID_Pizzeria) VALUES
                 (@Nombre_Item, @ID_Pizzeria)
             END
         ELSE
